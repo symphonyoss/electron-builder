@@ -90,9 +90,9 @@ export async function createMacApp(packager: MacPackager, appOutDir: string, asa
   await packager.applyCommonInfo(appPlist, contentsPath)
 
   // required for electron-updater proxy
-  if (!isMas) {
+  /** if (!isMas) {
     configureLocalhostAts(appPlist)
-  }
+  } **/
 
   helperPlist.CFBundleExecutable = `${appFilename} Helper`
   helperPlist.CFBundleDisplayName = `${appInfo.productName} Helper`
